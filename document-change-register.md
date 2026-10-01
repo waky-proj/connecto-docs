@@ -8,7 +8,7 @@ On 1 October 2026 the user requested a summary here after document updates, foll
 
 ## Canonical baseline
 
-All four canonical documents now have version 2.0 under applied DCR-2026-10-01-008. Version 1.0 originals are archived in history with timestamp 20261001T164304+1300:
+The DCR-008 baseline set all four canonical documents to 2.0. Approved DCR-009 is partially applied: Implementation Plan and Technology Implementation are now 2.1; Architecture remains at its last verified 2.0 baseline and is locked, and Business Requirements remains 2.0. Version 1.0 originals are archived in history with timestamp 20261001T164304+1300:
 
 - Connecto_Business_Requirements.docx
 - Connecto_Architectural_Specification.docx
@@ -44,7 +44,9 @@ The source entries below retain historical approval/application statements from 
 ### DCR-2026-10-01-009 — Foundation identity configuration and honest unavailable parsing
 
 - Recorded: 1 October 2026, Pacific/Auckland.
-- Status: pending explicit human approval. Approval reference: none. Application result: not applied.
+- Status: approved; partially applied on 1 October 2026 at 17:19:59 NZDT. Approval reference: human user in Plan and implement the POC MVP, chat `01a0f557-a3ee-7572-b6f9-323988c97319`, on 1 October 2026: “Approve DCR-009”. Exact approval turn identifier unavailable. Application result: Implementation Plan and Technology Implementation updated from verified 2.0 to 2.1; Architecture remains locked and unmodified, and the user has been asked to close it. Approval remains valid for the remaining identified change subject to current-version reconciliation. Do not mark the complete proposal applied or request approval again merely because of the lock. No publication approval is inferred.
+- Applied archives: `history/Connecto_Implementation_Plan_v2.0_20261001T171959+1300.docx` and `history/Connecto_Technology_Implementation_v2.0_20261001T171959+1300.docx`. Originals were archived before replacement; source/archival SHA-256 matched, current hashes were rechecked immediately before replacement, and replacement hashes/versions were verified. Prior history entries and paragraph/cell formatting were retained; new 2.1 history rows include Auckland date, DCR-009 approval and source references. Business Requirements was not modified.
+- Verification: updated DOCX ZIP packages and XML/rels parse; history preservation and 2.1 version labels pass; approved profile/manual-posting, parser 503/no-key, Cognito flows and staging caveats verified in text. Render attempted on both updated candidates with the packaged documents renderer, but `soffice.exe` could not be located. No page images were produced, so layout/visual inspection remains unverified. No Git branch, commit, push, migration, deployment or product code change was performed for this approval application. Partial summary: change-summaries/DCR-2026-10-01-009.md.
 - Source: user “begin implementation based on implementation plan”, current Plan and implement the POC MVP chat `01a0f557-a3ee-7572-b6f9-323988c97319`; exact turn identifier unavailable. Product implementation authority does not approve canonical edits.
 - Evidence: terraform/cognito.tf, Program.cs, appsettings.json, OpenAIListingParser.cs, ListingParsingUnavailableException.cs, ListingParseController.cs and AuthenticationTests.cs; workspace identity-contract.test.mjs exercises actual frontend password/refresh requests against declared Terraform flows. Latest 23 backend tests, 22 frontend tests, one workspace contract test and Terraform formatting/validation pass. API tests use EF InMemory. No Terraform apply, database migration, Cognito runtime test, browser journey or AWS deployment occurred. Official AWS auth-flow guidance supports the flow mapping: https://docs.aws.amazon.com/cognito/latest/developerguide/authentication.html.
 - Rationale: resolve the declared/frontend authentication mismatch without removing SRP compatibility; prevent unavailable parsing from blocking structured marketplace use or returning fabricated successful extraction.
@@ -307,3 +309,16 @@ Apply only after explicit proposal approval, current-version/full-document recon
 
 Business Requirements, Architectural Specification and Implementation Plan: no independent canonical edit needed solely for local scaffold creation; proposed ownership/architecture remains covered by 003. This task does not approve unresolved product policies or deployment decisions. Before canonical application, recheck full documents/versions and overlapping proposals; archive current DOCX, preserve history, add approval/source reference and Auckland date, then verify using documents skill. Renew approval for material reconciliations. Canonical files unchanged.
 
+
+### Hourly review — 1 October 2026, 17:15 NZDT
+
+Rediscovered both Connecto projects and accessible related chats. Latest material implementation changes are already covered by DCR-2026-10-01-009; independently inspected Cognito password/SRP/refresh declarations and unavailable parser/503 mapping. No additional scope proposal is needed. Test counts remain source execution evidence; no deployed checks were performed by this monitor.
+
+Explicit human approval for DCR-009 verified in **Plan and implement the POC MVP**, chat `01a0f557-a3ee-7572-b6f9-323988c97319`, turn `01a0f5ac-2514-7051-a1b7-47e967ab8992`, user message `01a0f5ac-25a9-7cb3-a596-d5da4510cb1d`: “Approve DCR-009”. This supersedes the proposal's historical pending-approval status. Application is in progress in that source chat, which reported an Architecture DOCX lock and requested closure. Monitor claims no completed application, does not duplicate edits, and leaves the application owner to record final versions, archives and verification. DCR-009 GitHub publication remains separately unapproved. Prior DCR-008 baseline/publication remains established; published supporting Markdown does not constitute DCR-009 publication approval. Older-history retrieval limitations remain as checkpointed. No new inaccessible source was encountered.
+
+
+## Completed approved batch
+
+DCR-2026-10-01-009 fully applied on 1 October 2026 at 17:37 NZDT. Architecture is now 2.1: both current parser descriptions explain explicit unavailability, authenticated 503/manual-entry guidance and optional AI startup; the identity decision records locally permitted password/SRP/refresh flows and outstanding AWS acceptance. Its exact 2.0 original is archived at history/Connecto_Architectural_Specification_v2.0_20261001T173725+1300.docx. Implementation Plan and Technology remain at the verified 2.1 versions described above. Business Requirements remains 2.0. Source/archive/replacement hashes, ZIP/XML and preserved history were checked. Packaged rendering again failed because soffice.exe is absent; visual layout remains unverified.
+
+Publication approval: human in Add project documents to docs on 1 October 2026: “document is closed and commit the changes with summary of changes and push into github”. Approved publication branch: docs/dcr-009-foundation-v2-1. Batch: three canonical DOCX, their three exact 2.0 archives, this per-document summary and the relevant change register. Monitor checkpoints are excluded. Later frontend work is outside this DCR-009 batch. No merge or force push authorised.
