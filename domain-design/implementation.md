@@ -1,26 +1,42 @@
 # Connecto domain implementation plan
 
-Version 0.1 | 1 October 2026
+Version 0.3 | 1 October 2026 | F1 configuration and F2 implementation progress
 
-Implement the domain journey incrementally in the existing solution. Each increment includes persistence, authorised API behaviour, frontend states, and meaningful verification. Proposed routes and records are design contracts, not endpoints that currently exist.
+Implement the domain journey incrementally in the existing solution. Each increment includes persistence, authorised API behaviour, frontend states, and meaningful verification. Canonical version 2.0 under applied DCR-2026-10-01-008 governs scope and documented architecture: initial domain modules in the current API, a stable App API and staged services as the longer-term target, and unresolved policy values as release dependencies. Contract examples remain future designs unless explicitly listed as implemented below. Use the detailed [S0–S11 delivery plan](poc-mvp-delivery-plan.md) and [foundation status/backlog](foundation-poc-progress.md) to track work.
 
 ## Current baseline
 
-- Cognito authentication, internal user provisioning, and `GET /api/users/me` exist. Profile editing remains local.
+- Cognito authentication, internal user provisioning, and `GET /api/users/me` exist. `PATCH /api/users/me` persists allowlisted firstName/lastName/city/bio edits; `GET /api/users/me/activity` retrieves paginated owned Needs/Offerings. UI profile/activity wiring exists locally; browser/SQL Server/staging acceptance remains open.
 - `POST /api/needs` and `POST /api/offerings` persist listings. Current validation does not yet express all proposed taxonomy, money, and date rules.
 - `GET /api/needs/{needId}/matches` enforces ownership and calculates up to ten ranked results from active offerings. The current matching service does not enforce all proposed eligibility rules.
 - `POST /api/discover/needs` is a placeholder. An internal discovery service exists but does not establish an implemented client-facing discovery workflow.
-- `POST /api/ai/parse/need` and `/offering` return parsed listing data. Startup currently requires an OpenAI key.
-- Frontend discovery, conversations, profile edits and activity retrieval contain local/demo behaviour. Demo scoring differs from backend scoring.
+- `POST /api/ai/parse/need` and `/offering` now return authenticated 503 ProblemDetails because extraction is unavailable. The fixed-category placeholder and mandatory startup key were removed in F2; manual posting works without AI configuration. Real extraction and related-wording interpretation are not implemented; MatchingEngine does not consume configured weights.
+- F1 Terraform now permits the frontend's password/refresh flows, retains SRP compatibility and no client secret. Local contract/format/validation checks pass; no AWS apply or staging identity verification occurred.
+- Frontend production profile and own activity use the API. Tokens/private collections stay in memory; legacy shared private storage is removed and session generations reject obsolete results. Discovery and conversations retain incomplete/demo behaviour; demo scoring differs from backend scoring.
 - The Domain Match entity has pending/accepted/rejected status and EF mapping, but there is no implemented connection/engagement workflow. User and Offering both contain reputation fields without the proposed reciprocal feedback source.
 - Engagements, persisted reviews/photos, durable events, safety cases, and business metric projections are proposed capabilities.
+- Sixteen local Git repositories with guides exist. App/API contain code; other BFF/domain/platform repositories are scaffolds. Terraform remains in connecto-api. Repository existence is not service extraction.
+
+## Delivery status and slice mapping
+
+| Existing increment | Detailed slices | Current status |
+|---|---|---|
+| 1 Persistent marketplace foundation | S0–S3 | S0/S1 locally implemented in part; browser/SQL/staging gates open. S2 terms/lifecycle and S3 discovery/configured semantic matching remain work |
+| 2 Durable integration and safety | S4 | Planned; operational policies and authorised staff process required |
+| 3 Connections and engagements | S5–S6 and S8 | Planned; independent reports follow persistent coordination in the detailed sequence |
+| 4 Coordination | S7 | Planned; participant-only persisted chat |
+| 5 Feedback and reputation | S9 | Planned; eligibility/publication policies required |
+| 6 Photos and private evidence | S10 | Planned; authorised private media lifecycle |
+| 7 Business assessment | S11 | Planned; milestone capture begins earlier, cohorts/targets agreed before evaluation |
+
+The S0–S11 sequence controls execution order. These broader increments group domain work and do not require S8 completion reporting to precede S7 coordination. Feature delivery and service extraction remain separate sequences.
 
 ## Module implementation briefs
 
 | Module | Backend and data work | Frontend and interface work | Key verification |
 |---|---|---|---|
-| Members | Update profile use case, public/private DTOs, versioned preferences; retain subject mapping | Persist edits through proposed `PATCH /api/users/me`; safe public member view | Owner-only edits; private fields excluded; saved edits survive new session |
-| Listings | Consolidate business interfaces; explicit taxonomy and PriceTerms; owner edit/pause/close; server-owned activity queries | Proposed GET/PATCH routes for Needs/Offerings; API activity replaces device cache | Money/date/skill validation; ownership; closing preserves engagement history |
+| Members | Allowlisted own profile PATCH implemented; complete public/private DTOs, preferences and subject-mapping verification | Own edits use `PATCH /api/users/me`; safe public member view remains work | Owner-only edits; private fields excluded; prove saved edits after a fresh browser/device login |
+| Listings | Own paginated activity implemented; explicit taxonomy and PriceTerms, owner edit/pause/close and revisions remain work | `/api/users/me/activity` powers own activity; proposed listing management/detail contracts still need implementation | Money/date/skill validation; ownership; closing preserves engagement history |
 | Discovery | Implement paginated database search and filters; eligibility before weighted scoring; reputation query contract | Proposed `GET /api/discover/offerings`; explain fits, unknowns and exclusions; suitability action | Excludes self/inactive/blocked candidates; handles missing history; stable pagination |
 | Connections | New request aggregate, unique active-request constraint, transitions, term revision, idempotent acceptance | Proposed `/api/connections`, `/{id}/accept`, `/decline`, `/withdraw`; participant inbox | Nonparticipant forbidden; stale terms rejected; concurrent/retried acceptance creates one engagement |
 | Engagements | Agreement snapshot, separate progress and confirmation state, two reports, concurrency version, history | Proposed `/api/engagements/{id}` and `/completion-reports`; show each confirmation explicitly | One confirmation never becomes both; conflict opens dispute; listing edits leave snapshot intact |
@@ -30,15 +46,17 @@ Implement the domain journey incrementally in the existing solution. Each increm
 | Safety | Blocks/reports/cases/restrictions and scoped staff commands; audit trail; cross-module policies | Proposed `/api/reports`, `/api/blocks`, authorised case tools; private reporting flow | Blocks enforced on commands; staff privileges limited; decisions trigger correct downstream changes |
 | Measurement | Outbox consumers, deduplication, event taxonomy, cohort queries; include demo/source marker | Explicit suitable-offering action; internal aggregate dashboard | Retries do not double-count; denominators reproducible; one-confirmed differs from completed |
 
-Resource IDs in these routes never establish permission by themselves. Use the authenticated actor throughout. State-changing POSTs that can be retried use idempotency keys and version checks as appropriate. Monetary fields include currency and basis; amounts use decimals. Store event/report times in UTC and display them in the user's timezone.
+Resource IDs in these routes never establish permission by themselves. Use the authenticated actor throughout. Proposed state-changing POSTs that can be retried require idempotency keys and version checks as appropriate. The target monetary contract includes currency and basis with decimal amounts; current listings do not yet provide the complete contract. Target event/report times use UTC and display in the user's timezone. The canonical technology specification's /api/v1 catalogue governs future versioned contracts; legacy examples here do not establish additional implemented routes.
 
 ## Delivery increments
 
 ### Increment 1 Complete the persistent marketplace foundation
 
-Complete profile updates, owned activity retrieval, listing validation and lifecycle, and paginated discovery. Align frontend/backend taxonomy and monetary units before changing ranking. Preserve existing listing data with explicit legacy/unknown pricing basis rather than guessing historical units. Add self-exclusion, supported hard constraints, and documented handling of missing reputation. Keep demo and API data clearly distinguishable.
+Profile updates, owned activity and session isolation are locally implemented. Finish F1–F4 identity/optional-AI, real browser/SQL Server and release-path evidence in foundation-poc-progress.md; then implement listing validation/lifecycle and paginated discovery. Align frontend/backend taxonomy and monetary units before changing ranking. Preserve existing listing data with explicit legacy/unknown pricing basis rather than guessing historical units. Add self-exclusion, supported hard constraints, documented unknown/reputation handling, configurable/versioned scoring and representative related-wording interpretation. Keep demo and API data clearly distinguishable. Extraction alone does not satisfy semantic matching.
 
 Acceptance: an authenticated member can publish, retrieve after a new session, edit their own profile/listings, discover persisted offerings, and inspect real match explanations. Another member cannot access private activity or mutate their resources. Existing auth/posting behaviour remains supported.
+
+Current evidence: latest local runs recorded 23 backend tests, 22 frontend tests and one workspace identity-contract test passing, with Terraform format/validation passing. Prior frontend lint/build evidence remains. API tests use EF InMemory; these counts do not prove real SQL, browser or AWS acceptance. F1 configuration and F2 no-key/manual posting are implemented locally; F1 staging evidence and S0/S1 environment/journey gates remain open. Numeric performance/semantic thresholds remain proposed as in canonical version 2.0.
 
 ### Increment 2 Establish durable integration and basic safety
 
@@ -90,10 +108,13 @@ Apply additive migrations, backfill explicitly, and introduce each capability be
 | Both participants provide feedback | Agreed direction | Assess experience in each role |
 | Completion is independently reported by both participants | Agreed direction | Preserve unilateral and disputed outcomes |
 | Feedback supports optional product/service photos | Agreed direction | Provide context for the delivered outcome |
-| Modular monolith on existing stack | Proposed | Introduce business ownership without new deployment complexity |
+| Initial domain modules in existing host | Documented baseline under DCR-008 | Deliver behaviour and prove boundaries before extraction |
+| Stable App API and staged microservices | Documented future target under DCR-008; extraction gated | No service cutover follows merely from repository scaffolds |
 | Accepted request creates agreement snapshot | Proposed | Later listing edits cannot alter accepted terms |
 | Role-specific reputation, composite score deferred | Proposed | Make evidence understandable before choosing weights |
 | Private media with explicit publication access | Proposed | Support hidden feedback and private case evidence |
 | Durable outbox for downstream work | Proposed | Recover notifications, projections and jobs after failure |
 
-Update this record when policy decisions are made. Revise the existing requirements/architecture/implementation documents when the corresponding release scope is adopted, preserving their version history.
+Detailed agreement, feedback, media and outbox entries remain proposed implementation choices where version 2.0 leaves values/policies unresolved. Documentation adoption does not prove implementation or release approval. Update this record when explicit policy decisions are made and follow canonical change control for material changes.
+
+Version history: 0.1 initial domain plan; 0.2 canonical reconciliation; 0.3 records F1 config/F2 code and verification, with canonical proposal DCR-009 pending. Canonical files remain unchanged by this implementation slice.

@@ -1,0 +1,256 @@
+{
+  "reviewed_at": "2026-10-01T16:13:33+13:00",
+  "approval_checked": true,
+  "explicit_document_approval_found": false,
+  "chats": [
+    {
+      "chat_id": "01a0f4ea-e102-7a32-afd5-c40ca01f9f52",
+      "title": "Design domain microservices and app",
+      "updated_at": 1790824464,
+      "reviewed_turns": [
+        "01a0f556-f3b0-7532-9dab-f516b2d3ca68",
+        "01a0f4f3-9ccd-7c32-8e71-cd9feaeb73db",
+        "01a0f4ee-7480-7be3-aff5-f65d72fe5eb8"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "Local scaffold creation independently checked. Proposal 006 already presented for approval in source chat; no approval found. Latest turn interrupted after final response; do not infer completion beyond inspected artifacts."
+    },
+    {
+      "chat_id": "01a0f4f3-3b04-7b92-9dfd-5def918fb533",
+      "title": "Identify external service risks",
+      "updated_at": 1790816219,
+      "reviewed_turns": [
+        "01a0f4f4-97a0-7210-b730-b722c3bfe289"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": ""
+    },
+    {
+      "chat_id": "01a0f4a2-6fe6-7a71-9429-2e494c9577ef",
+      "title": "Define Connecto domain boundaries",
+      "updated_at": 1790814285,
+      "reviewed_turns": [
+        "01a0f4b0-a1e1-7122-8625-77c9a2bfe22a",
+        "01a0f4ae-80a0-7702-825f-7b1a3de617ad",
+        "01a0f4ab-f681-79c3-8eba-0176202396a9",
+        "01a0f4a5-7322-7cc0-920b-fa1461caa13f"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": ""
+    },
+    {
+      "chat_id": "01a0f462-48b1-7c23-af19-f060cebd9906",
+      "title": "Security Assessments",
+      "updated_at": 1790810613,
+      "reviewed_turns": [
+        "01a0f4a1-2898-7633-96d4-90e5420db23f",
+        "01a0f49c-ce83-7180-a685-e45c0ad172b7",
+        "01a0f462-58f1-71e0-bed4-aa2921229079"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": ""
+    },
+    {
+      "chat_id": "6abcccc7-263c-83ec-b110-6782a1634cf3",
+      "title": "Plan Technology Implementation",
+      "updated_at": 1790809363.769278,
+      "reviewed_turns": [
+        "ff0bd594-9c92-43f2-a982-a71b046b3718",
+        "d169b540-ad08-445e-b4d6-9caefea179dc",
+        "242dc7e0-293a-4aa0-a07e-5f3904b298fc"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": ""
+    },
+    {
+      "chat_id": "6abcd517-a4f8-83ec-84ac-cc645e6499fd",
+      "title": "Create Architecture Specifications",
+      "updated_at": 1790809361.964932,
+      "reviewed_turns": [
+        "778aae25-5de3-4b7d-9b0d-5d2d5fdf897d"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [
+        {
+          "turn": "778aae25-5de3-4b7d-9b0d-5d2d5fdf897d",
+          "item": "a2f87e13-96e1-4eb6-a52e-80ac6cec1e44"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "chat_id": "6abcd9bd-027c-83ec-8bc2-0f790ba428c6",
+      "title": "Create POC Implementation Plan",
+      "updated_at": 1790809359.281841,
+      "reviewed_turns": [
+        "e0d75b00-fd40-4c83-a1df-d15ecd494239"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": ""
+    },
+    {
+      "chat_id": "6abcfacc-ec94-83ec-a526-7d10396d64e5",
+      "title": "Design Authentication Backend",
+      "updated_at": 1790809349.705395,
+      "reviewed_turns": [
+        "ae02c81c-ea59-4e81-af81-54dee0025827",
+        "4438081f-ed4e-4b2c-bd28-ce9f1c91dee3",
+        "53486bbd-a720-4543-94c4-72dafcea8714"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [
+        {
+          "turn": "53486bbd-a720-4543-94c4-72dafcea8714",
+          "item": "cc8dacad-defa-4576-aa17-68c08a813303"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "chat_id": "6abd05f8-16c0-83ec-af66-0aba0cc6582f",
+      "title": "Identify Migration Workflow Issue",
+      "updated_at": 1790809334.208677,
+      "reviewed_turns": [
+        "360bb35b-45ea-4518-b7f1-deef592a087d",
+        "623541ab-7c60-4c43-bbf0-013025b60d09"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [
+        {
+          "turn": "623541ab-7c60-4c43-bbf0-013025b60d09",
+          "item": "94ce52c0-8f89-4da2-91cc-d984daea26d5"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "chat_id": "6abccc17-7a78-83ec-89e4-98cf569c7773",
+      "title": "Define Business Requirements",
+      "updated_at": 1790809310.706728,
+      "reviewed_turns": [
+        "71b98d08-b36f-4a90-b9b3-19078e244caf",
+        "1f62a3c4-f702-47bc-a92c-291fdba793fb",
+        "cfd3b1e0-c1bd-4930-acf0-4f3d427ca636",
+        "d6cb0f80-ba92-4129-9ea5-ce01871f2c3e"
+      ],
+      "older_history_cursor": "d6cb0f80-ba92-4129-9ea5-ce01871f2c3e",
+      "older_history_remaining": true,
+      "truncated_items": [],
+      "notes": "Original requirements turn 2f6db370-01ac-4931-84ab-473230b93eee additionally reviewed through final older page."
+    },
+    {
+      "chat_id": "01a0f489-df5f-7d82-aeff-a1a1e8a8809d",
+      "title": "Review Connecto project state",
+      "updated_at": 1790809697,
+      "reviewed_turns": [
+        "01a0f48a-ca1f-7061-97af-2dc8b26eb43b"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": ""
+    },
+    {
+      "chat_id": "6aafa334-b754-83ec-811e-1569d9dc7a4a",
+      "title": "Business Idea Marketplace",
+      "updated_at": 1790809054.198565,
+      "reviewed_turns": [
+        "c39c4995-a43e-4abe-8e4e-4c4476ec51c7",
+        "ca5dae6d-421a-49fb-a0cd-199f0be7b2b8",
+        "9e66a65e-f44f-4257-b314-faed1ce5ddeb",
+        "82ec742e-3de5-4b0a-a950-c2200a82f5be"
+      ],
+      "older_history_cursor": "82ec742e-3de5-4b0a-a950-c2200a82f5be",
+      "older_history_remaining": true,
+      "truncated_items": [],
+      "notes": ""
+    },
+    {
+      "chat_id": "6abd0a97-2350-83ec-96e0-fe230a4ebf0e",
+      "title": "Security Code Assessment",
+      "updated_at": 1790808584.952541,
+      "reviewed_turns": [
+        "061c7c15-5057-4d63-a7dd-cfeed0220eb5",
+        "dd5b0216-0d41-45be-909e-6db139b16fc8",
+        "6374010b-7c51-4c5b-aa64-3b4dc290b777"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": ""
+    },
+    {
+      "chat_id": "01a0f1ca-ec0d-73b1-9c6e-4f3f41aaa008",
+      "title": "App Implementation",
+      "updated_at": 1790808652,
+      "reviewed_turns": [
+        "01a0f25c-732c-7cd0-b19a-671a5e9d5ca9",
+        "01a0f251-0615-72c2-a86f-a7f81d165645",
+        "01a0f22f-bafe-7402-be9e-385cb5846c59",
+        "01a0f223-9c9a-7003-896f-184af2b14880"
+      ],
+      "older_history_cursor": "{\"requestedThreadId\":\"01a0f1ca-ec0d-73b1-9c6e-4f3f41aaa008\",\"rolloutOrdinal\":498,\"includeAnchor\":false,\"scope\":{\"kind\":\"turns\"}}",
+      "older_history_remaining": true,
+      "truncated_items": [],
+      "notes": ""
+    },
+    {
+      "chat_id": "01a0f23a-fb89-75e1-a3f6-c58bc71851b1",
+      "title": "Authentication Implementation",
+      "updated_at": 1790771684,
+      "reviewed_turns": [
+        "01a0f24e-d23c-7893-abd8-cfa4fb8075a6",
+        "01a0f23b-0443-79c0-84e4-6adab24e16ef"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": ""
+    },
+    {
+      "chat_id": "01a0be5b-b2bd-7982-adec-34faa40fa23e",
+      "title": "Initial Business Idea Brainstorming",
+      "updated_at": 1790809157,
+      "reviewed_turns": [
+        "01a0be5b-b713-7370-8edb-5a61c9b92838"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": ""
+    },
+    {
+      "chat_id": "01a0f557-a3ee-7572-b6f9-323988c97319",
+      "title": "Plan and implement the POC MVP",
+      "updated_at": 1790824425,
+      "reviewed_turns": [
+        "01a0f559-7cd8-7f70-8690-9665c46b76de"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "Proposal 005 already presented for approval in source chat; no explicit approval found. Recommended plan does not establish adopted scope or implemented features."
+    }
+  ],
+  "limitations": [
+    "Recent pages reviewed for long App Implementation and Business Idea Marketplace histories; older unreviewed history remains explicitly checkpointed.",
+    "Architecture source response exceeds 20000 character retrieval limit; retrieved portion reviewed.",
+    "Business Requirements canonical DOCX locked by another process; generated baseline source inspected instead. Other three canonical DOCX files inspected read-only.",
+    "No live infrastructure or runtime tests performed."
+  ]
+}

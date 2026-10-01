@@ -41,6 +41,39 @@ Canonical impact assessment: no new business scope, architecture decision, contr
 
 The source entries below retain historical approval/application statements from their creation. The DCR-008 consolidated result governs current status; the contradictory historical pending wording is not a renewed approval request.
 
+### DCR-2026-10-01-009 — Foundation identity configuration and honest unavailable parsing
+
+- Recorded: 1 October 2026, Pacific/Auckland.
+- Status: pending explicit human approval. Approval reference: none. Application result: not applied.
+- Source: user “begin implementation based on implementation plan”, current Plan and implement the POC MVP chat `01a0f557-a3ee-7572-b6f9-323988c97319`; exact turn identifier unavailable. Product implementation authority does not approve canonical edits.
+- Evidence: terraform/cognito.tf, Program.cs, appsettings.json, OpenAIListingParser.cs, ListingParsingUnavailableException.cs, ListingParseController.cs and AuthenticationTests.cs; workspace identity-contract.test.mjs exercises actual frontend password/refresh requests against declared Terraform flows. Latest 23 backend tests, 22 frontend tests, one workspace contract test and Terraform formatting/validation pass. API tests use EF InMemory. No Terraform apply, database migration, Cognito runtime test, browser journey or AWS deployment occurred. Official AWS auth-flow guidance supports the flow mapping: https://docs.aws.amazon.com/cognito/latest/developerguide/authentication.html.
+- Rationale: resolve the declared/frontend authentication mismatch without removing SRP compatibility; prevent unavailable parsing from blocking structured marketplace use or returning fabricated successful extraction.
+- Review artifacts: foundation-poc-progress.md, implementation.md and poc-mvp-delivery-plan.md version 0.3; current API README/AUTHENTICATION.md.
+- Current versions: Business Requirements, Implementation Plan and Technology Implementation independently rechecked at 2.0. Architecture was locked during this recheck; 2.0 is the last verified/applied DCR-008 baseline, not independently reverified this turn. Resolve the lock and any concurrent updates before application.
+- Affected documents: Architecture, Implementation Plan and Technology Implementation, each proposed 2.0 → 2.1 for ordinary implementation/configuration changes. Business Requirements requires no change: manual structured posting and required future semantic matching remain in scope. Proposed versions must be reconciled against actual current documents before application.
+
+#### Exact canonical changes for approval
+
+**Architectural Specification — Matching and parsing; Future architecture and service security / identity configuration references:** replace current fixed-category and unconditional startup-key statements with:
+
+> AI listing parsing is explicitly unavailable until a real adapter is implemented and validated. The current OpenAIListingParser raises a specific unavailable exception rather than returning a fixed category. Authenticated need/offering parse endpoints map that condition to HTTP 503 ProblemDetails with manual-entry guidance. API startup and structured posting no longer require an OpenAI key; setting a key does not activate extraction. Related-wording matching and configurable scoring remain unmet requirements.
+
+Replace descriptions of the current declared SRP-only/frontend mismatch with:
+
+> The local Terraform public app client now permits password and refresh authentication used by the frontend, retaining SRP compatibility and generate_secret=false. This configuration change is locally contract-tested but has not been applied to AWS. Real Cognito registration, confirmation, login and refresh plus public/downstream TLS remain environment acceptance gates. The broader service/workload identity target is unchanged.
+
+**Implementation Plan — Baseline and priorities; Foundation implementation status; identity/parsing work in phase 1 and S0:** add and reconcile prior open code-work claims using:
+
+> F1's local authentication configuration and F2's unavailable-parsing behaviour are implemented. Terraform now admits the frontend password/refresh flows while preserving SRP compatibility. The API starts without an AI key, manual profile/listing/activity workflows remain usable, and authenticated parsing returns safe 503/manual-entry guidance instead of fabricated output. Latest verification passed twenty-three backend tests, twenty-two frontend tests, one workspace authentication contract check, Terraform formatting and validation. API tests use EF InMemory. F1 still needs reviewed configuration application and real Cognito evidence; S0/S1 remain open for browser, SQL Server, TLS, migration recovery and staging checks. No AWS or database changes were executed. Real extraction, semantic matching and configurable scoring remain future implementation.
+
+**Technology Implementation — Identity integration issue; local configuration; parse HTTP behaviour and maintenance verification:** replace obsolete key/mismatch/placeholder statements and add:
+
+> Configure Cognito issuer and app client for API startup. OpenAI defaults are empty and no unconditional key validation runs; no real parser is enabled by supplying credentials. POST /api/ai/parse/need and /offering still require authentication and return HTTP 503 application/problem+json with title Listing parsing unavailable and manual-entry guidance when the adapter is unavailable. Structured listing POSTs and own profile/activity continue independently. The specific unavailable condition is translated at the API boundary; cancellation and unrelated failures are not treated as successful extraction.
+
+> Terraform explicit_auth_flows contains ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH and ALLOW_REFRESH_TOKEN_AUTH for the existing public client with no client secret. The workspace command node --test docs/domain-design/identity-contract.test.mjs, run from the Connecto root, compares real frontend login/refresh requests with the sibling API declaration. It is intentionally separate from app-only tests. Terraform formatting/validation and local API regression checks pass; a fresh plan against existing state and real Cognito/SQL/browser/deployment verification are required before release. Do not reuse historical Terraform change counts or infer that local configuration was applied.
+
+Approval scope is the exact wording above and necessary removal of conflicting current-state sentences in the named sections. Retain historical evidence as historical and unresolved product policies unchanged. Before applying, recheck full current documents/versions, reconcile concurrent changes and obtain renewed approval for material differences; archive originals with current version/timestamp, preserve history, add Auckland approval/source references and use the documents skill with disclosed rendering limitations. No canonical versions or files changed in this implementation turn. Publication requires separate approval under AGENTS.md.
+
 ### DCR-2026-10-01-008 — Consolidated document revision
 
 - Status: applied on 1 October 2026 at 16:43 NZDT. Local branch creation, commit and GitHub push approved by the human user on 1 October 2026 in Add project documents to docs: approve the changes. Published successfully to origin/docs/consolidated-dcr-008-v2; commit 83f0f12.
