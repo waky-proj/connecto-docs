@@ -1,7 +1,7 @@
 {
-  "reviewed_at": "2026-10-01T16:13:33+13:00",
+  "reviewed_at": "2026-10-04T13:46:53+13:00",
   "approval_checked": true,
-  "explicit_document_approval_found": false,
+  "explicit_document_approval_found": true,
   "chats": [
     {
       "chat_id": "01a0f4ea-e102-7a32-afd5-c40ca01f9f52",
@@ -225,26 +225,90 @@
     {
       "chat_id": "01a0be5b-b2bd-7982-adec-34faa40fa23e",
       "title": "Initial Business Idea Brainstorming",
-      "updated_at": 1790809157,
+      "updated_at": 1790839065,
       "reviewed_turns": [
         "01a0be5b-b713-7370-8edb-5a61c9b92838"
       ],
       "older_history_cursor": null,
       "older_history_remaining": false,
       "truncated_items": [],
-      "notes": ""
+      "notes": "Same historical failed turn; timestamp change supplies no new decision."
     },
     {
       "chat_id": "01a0f557-a3ee-7572-b6f9-323988c97319",
       "title": "Plan and implement the POC MVP",
-      "updated_at": 1790824425,
+      "updated_at": 1790855106,
       "reviewed_turns": [
+        "01a0f632-83e5-7020-b59a-048514928fcb",
+        "01a0f5fb-6c23-7473-b3b4-a6a535e70ac5",
+        "01a0f5cc-8449-7de2-95af-1a47c2a5d38a",
+        "01a0f5b9-e534-7ad0-9c4d-48a5c42fb806",
+        "01a0f5b3-1a4c-7bc2-9095-e38d30e71e56",
+        "01a0f5ac-2514-7051-a1b7-47e967ab8992",
+        "01a0f5a0-4d6b-7453-ad35-5e4be8132072",
+        "01a0f579-0431-7d53-9fd0-bf8cd6a3f30e",
         "01a0f559-7cd8-7f70-8690-9665c46b76de"
       ],
       "older_history_cursor": null,
       "older_history_remaining": false,
       "truncated_items": [],
-      "notes": "Proposal 005 already presented for approval in source chat; no explicit approval found. Recommended plan does not establish adopted scope or implemented features."
+      "notes": "Preview replay adds no scope or implemented persisted workflow."
+    },
+    {
+      "chat_id": "01a0f699-8496-76e1-8c6f-8a18e8431310",
+      "title": "Implement Cognito login and refresh",
+      "updated_at": 1790844090,
+      "reviewed_turns": [
+        "01a0f69b-8b8c-7763-978b-5016e5b0d7d2"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "DCR-011 already recorded and requested in source chat. No human canonical approval. Local refresh resilience verified against code, live Cognito blocked on public configuration."
+    },
+    {
+      "chat_id": "01a0f645-7aed-72f1-b644-79819a13f3da",
+      "title": "Create Connecto project overview",
+      "updated_at": 1790844193,
+      "reviewed_turns": [
+        "01a0f69b-e447-7290-803f-950de39cbfff"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "Local progress dashboard, evidence-based checkpoints and offline guide; ongoing work is supporting tooling, not adopted business scope or release acceptance."
+    },
+    {
+      "chat_id": "01a0f6a3-c6e4-7f72-8f6a-8a17ccaea900",
+      "title": "S0-S1 implementation changes",
+      "updated_at": 1790850389,
+      "reviewed_turns": [
+        "01a0f6ff-d33e-7272-ad91-92a711a14c87",
+        "01a0f6fc-d5f1-7253-a6a1-7dad5fe5aabf",
+        "01a0f6fa-09ea-7752-9a9b-8e976b7024e1",
+        "01a0f6ec-02de-7c21-b48f-efef6e2661bf",
+        "01a0f6a4-8b85-7cf1-bb8b-660e5fd54cba",
+        "01a0f6be-fd52-7f90-b0fe-57d0497f1ccc",
+        "01a0f6c7-7a34-7233-a4b9-f7713269ba87",
+        "01a0f6d2-b9ca-7671-b7c6-13ce50d8c778"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "DCR-011 applied to three technical docs 2.3 with explicit editing approval and standing authorisation; summary already notified here. Publication approval pending. Later local/AWS testing alternatives and RDS connection advice are recommendations, not deployed implementation or closed gates."
+    },
+    {
+      "chat_id": "01a10129-b110-7792-8a7d-a86eb94c0cad",
+      "title": "Suggest implementation next step",
+      "updated_at": 1791024031,
+      "reviewed_turns": [
+        "01a10151-ca33-75e3-88ca-394c0f0bd3c4",
+        "01a10153-c8c8-7502-bc16-f14816018ea1"
+      ],
+      "notes": "Explicit human approval of DCR-013; failed agent turn does not invalidate human approval. Canonical contract applied; no implementation claimed.",
+      "older_history_remaining": true,
+      "older_history_cursor": null,
+      "truncated_items": []
     }
   ],
   "limitations": [
@@ -252,5 +316,7 @@
     "Architecture source response exceeds 20000 character retrieval limit; retrieved portion reviewed.",
     "Business Requirements canonical DOCX locked by another process; generated baseline source inspected instead. Other three canonical DOCX files inspected read-only.",
     "No live infrastructure or runtime tests performed."
-  ]
+  ],
+  "last_attempt_at": "2026-10-05T11:06:38+13:00",
+  "last_attempt_status": "Blocked: required list_threads/list_projects/read_thread tools unavailable. Successful review timestamp retained."
 }

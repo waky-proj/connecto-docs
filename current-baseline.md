@@ -47,3 +47,7 @@ Before real interactions, approve category/age boundaries, bilateral conduct, pa
 Future canonical-document edits require a concrete DCR and explicit human approval, archival of affected originals, version increments and preserved history. Resolve conflicts against the latest verified implementation and adopted design while retaining historical context. A scope change must be identified explicitly rather than inferred from code or a brainstorm.
 
 After updates, summarise the batch in Add project documents to docs. Follow the user's approval instructions for branch creation and require explicit approval before commit/push. Existing published baseline does not authorise subsequent publications. Word XML, history and replacement hashes passed for version 2.0; visual page verification remains unavailable because the renderer could not locate soffice.exe.
+
+
+## Approved listing policy revision DCR 013
+On 4 October 2026 the verified 3 October human approval of DCR-013 was applied to Business Requirements 2.1 and technical documents 2.5. The approved listing contract resolves NZD, pricing bases, managed taxonomy, legacy treatment and lifecycle/revision rules; implementation remains planned. Other DCR-008 baseline scope and unresolved policies remain unchanged. Source and exact wording: document-change-register.md and change-summaries/DCR-2026-10-03-013.md. This revision is local and not yet published.
