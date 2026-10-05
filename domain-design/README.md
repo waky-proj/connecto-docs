@@ -1,20 +1,26 @@
 # Connecto domain design
 
-Version 0.1 | 1 October 2026 | Initial design baseline
+Version 0.2 | 1 October 2026 | Canonical version 2.0 reconciliation
 
 Connecto helps people publish a need, discover relevant offerings, agree to connect, complete the agreed help, and assess the experience. These documents define business ownership, the proposed architecture, and an incremental implementation plan.
 
 - [Business boundaries](business-boundaries.md): responsibilities, vocabulary, rules, and success measures.
 - [Architecture and integration](architecture.md): modules, data, interfaces, events, and connected workflows.
-- [Implementation plan](implementation.md): current capability, implementation approach for each module, delivery sequence, and acceptance evidence.
+- [Implementation plan](implementation.md): current capability, domain increments and their mapping to the detailed delivery slices.
+- [POC and MVP delivery plan](poc-mvp-delivery-plan.md): S0–S11 scope, dependencies, testing/security measures and proposed engineering thresholds.
+- [Foundation POC progress](foundation-poc-progress.md): locally implemented S0/S1, remaining S0–S3 gates and ordered F1–F10 backlog.
+- [Microservices and app integration design](microservices.md): target service ownership, app contracts, distributed acceptance and staged migration. Canonical version 2.0 documents this future target while retaining initial delivery in the current host; the design file's original pending-status wording is historical.
+- [Proposal validation, security and repository names](microservices-validation-security-repositories.md): current security findings, app/service and inter-service trust boundaries, release gates, and the proposed repository catalogue.
 
 The agreed direction includes milestone-based business measurement, feedback from both participants, independent completion confirmation, and optional photos of the product or service outcome. Detailed policies and implementation choices below are proposals unless explicitly identified as agreed. This documentation does not implement the proposed features or establish release commitments.
 
-The existing business requirements version 1.0 excludes service fulfilment, verification, and moderation from its baseline. This design expands the intended future scope to include engagements, feedback, media, and safety. The earlier baseline remains historical; this plan should inform its next revision. Payments, escrow, subscriptions, and delivery logistics remain outside the proposed initial scope.
+All four canonical documents are version 2.0 under applied DCR-2026-10-01-008, consolidating source proposals 002–007. They distinguish foundation POC from expanded domain MVP and current single-host delivery from later service extraction. Version 1.0 exclusions remain historical traceability. Payments, escrow, subscriptions and delivery logistics remain outside scope; capacity, cancellation, review, retention, visibility, category/age and staffing values remain release decisions. Numeric engineering gates remain proposed. Local implementation is not staging or pilot acceptance.
+
+The initial profile/activity/session slice is locally implemented. Additional repositories exist as guides/scaffolds; they do not establish deployed services. Older design files are source history and may retain pending-approval language; use canonical version 2.0 and the reconciled delivery/progress files for current status.
 
 ## Source baseline
 
-Current-state statements were checked against `connecto-api/Connecto.Domain/Entities`, application services and calculators, API controllers and startup, `Connecto.Infrastructure/Services/Data/ConnectoDbContext.cs`, the frontend README, `docs/continuation.md`, and the existing business requirements and architectural specification documents. Local code establishes implementation status; diagrams describe the proposed target.
+Current-state statements were checked against the four canonical version 2.0 documents, document-change-register.md, repository-inventory.md and local API/profile/activity/session/parser/scoring source. Local code establishes implementation status; diagrams describe future structure. The earlier domain architecture version 0.1 describes initial modular delivery and must be read with the canonical staged-target/extraction sections.
 
 ## Decisions to resolve
 
