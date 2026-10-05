@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-10-04T13:46:53+13:00",
+  "reviewed_at": "2026-10-05T22:07:02+13:00",
   "approval_checked": true,
   "explicit_document_approval_found": true,
   "chats": [
@@ -298,17 +298,54 @@
       "notes": "DCR-011 applied to three technical docs 2.3 with explicit editing approval and standing authorisation; summary already notified here. Publication approval pending. Later local/AWS testing alternatives and RDS connection advice are recommendations, not deployed implementation or closed gates."
     },
     {
+      "chat_id": "01a108f9-e94e-7fd2-970d-e6ffcf8c825d",
+      "title": "Complete S3 implementation",
+      "updated_at": 1791183722,
+      "reviewed_turns": [
+        "01a10ad9-3228-7330-a905-338013f2fc75",
+        "01a10a2d-3761-7aa2-8372-4a0056e88743"
+      ],
+      "older_history_cursor": "{\"requestedThreadId\":\"01a108f9-e94e-7fd2-970d-e6ffcf8c825d\",\"rolloutOrdinal\":830,\"includeAnchor\":false,\"scope\":{\"kind\":\"turns\"}}",
+      "older_history_remaining": true,
+      "truncated_items": [],
+      "notes": "Recent changed turns reviewed; see 5 October 22:07 daily review. No new publication approval."
+    },
+    {
+      "chat_id": "01a10a51-d162-7e43-999c-1b0150aa556f",
+      "title": "Update Connecto workflow guide",
+      "updated_at": 1791182278,
+      "reviewed_turns": [
+        "01a10a55-93f0-7b31-b50f-c86381c9f529"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "Recent changed turns reviewed; see 5 October 22:07 daily review. No new publication approval."
+    },
+    {
       "chat_id": "01a10129-b110-7792-8a7d-a86eb94c0cad",
       "title": "Suggest implementation next step",
-      "updated_at": 1791024031,
+      "updated_at": 1791151692,
       "reviewed_turns": [
-        "01a10151-ca33-75e3-88ca-394c0f0bd3c4",
-        "01a10153-c8c8-7502-bc16-f14816018ea1"
+        "01a10669-bbbf-7582-89a2-0cc55e7a2ccc",
+        "01a10668-a1d4-7843-bbf3-cc91c2935fff"
       ],
-      "notes": "Explicit human approval of DCR-013; failed agent turn does not invalidate human approval. Canonical contract applied; no implementation claimed.",
+      "older_history_cursor": "{\"requestedThreadId\":\"01a10129-b110-7792-8a7d-a86eb94c0cad\",\"rolloutOrdinal\":1907,\"includeAnchor\":false,\"scope\":{\"kind\":\"turns\"}}",
       "older_history_remaining": true,
+      "truncated_items": [],
+      "notes": "Recent changed turns reviewed; see 5 October 22:07 daily review. No new publication approval."
+    },
+    {
+      "chat_id": "01a10120-40ee-75d3-90e4-049e5ff80e85",
+      "title": "provide instructions that enable the application can run lo…",
+      "updated_at": 1791080165,
+      "reviewed_turns": [
+        "01a10121-1fc6-7d33-b3a2-b668be92a76e"
+      ],
       "older_history_cursor": null,
-      "truncated_items": []
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "Recent changed turns reviewed; see 5 October 22:07 daily review. No new publication approval."
     }
   ],
   "limitations": [
@@ -317,6 +354,6 @@
     "Business Requirements canonical DOCX locked by another process; generated baseline source inspected instead. Other three canonical DOCX files inspected read-only.",
     "No live infrastructure or runtime tests performed."
   ],
-  "last_attempt_at": "2026-10-05T11:06:38+13:00",
-  "last_attempt_status": "Blocked: required list_threads/list_projects/read_thread tools unavailable. Successful review timestamp retained."
+  "last_attempt_at": "2026-10-05T22:07:02+13:00",
+  "last_attempt_status": "Completed; chat access restored; DCR-014 already applied, no duplicate update."
 }
