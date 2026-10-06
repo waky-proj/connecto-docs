@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-10-05T22:07:02+13:00",
+  "reviewed_at": "2026-10-06T20:43:06+13:00",
   "approval_checked": true,
   "explicit_document_approval_found": true,
   "chats": [
@@ -346,6 +346,42 @@
       "older_history_remaining": false,
       "truncated_items": [],
       "notes": "Recent changed turns reviewed; see 5 October 22:07 daily review. No new publication approval."
+    },
+    {
+      "chat_id": "01a10b8b-7aaa-7722-a90e-5d33eecdfa97",
+      "title": "Complete S4 implementation",
+      "updated_at": 1791196381,
+      "reviewed_turns": [
+        "01a10b8b-a6a6-7a42-80bc-aab821f1ccf1"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "6 October daily review: status recorded; DCR-015 applied, publication unapproved."
+    },
+    {
+      "chat_id": "01a10b76-4a97-7a90-96a8-7faf154d221e",
+      "title": "Assess S0, S1, and S3 readiness",
+      "updated_at": 1791194651,
+      "reviewed_turns": [
+        "01a10b77-5807-7ac3-9794-889d9d7f1004"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "6 October daily review: status recorded; DCR-015 applied, publication unapproved."
+    },
+    {
+      "chat_id": "01a10b59-d46f-7ea0-a4fe-5f02a5f516d2",
+      "title": "Diagnose users/me CORS error",
+      "updated_at": 1791191907,
+      "reviewed_turns": [
+        "01a10b59-dea1-7aa3-8ac3-ff8020f64eb2"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "6 October daily review: status recorded; DCR-015 applied, publication unapproved."
     }
   ],
   "limitations": [
@@ -354,6 +390,6 @@
     "Business Requirements canonical DOCX locked by another process; generated baseline source inspected instead. Other three canonical DOCX files inspected read-only.",
     "No live infrastructure or runtime tests performed."
   ],
-  "last_attempt_at": "2026-10-05T22:07:02+13:00",
-  "last_attempt_status": "Completed; chat access restored; DCR-014 already applied, no duplicate update."
+  "last_attempt_at": "2026-10-06T20:43:06+13:00",
+  "last_attempt_status": "Completed; DCR-015 discovered already applied; no repeated replacement."
 }
