@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-10-06T20:43:06+13:00",
+  "reviewed_at": "2026-10-07T10:44:11+13:00",
   "approval_checked": true,
   "explicit_document_approval_found": true,
   "chats": [
@@ -382,6 +382,30 @@
       "older_history_remaining": false,
       "truncated_items": [],
       "notes": "6 October daily review: status recorded; DCR-015 applied, publication unapproved."
+    },
+    {
+      "chat_id": "01a11076-9a2f-7bf0-8b84-36189425faa0",
+      "title": "Complete S6 implementation",
+      "updated_at": 1791278769,
+      "reviewed_turns": [
+        "01a11076-d5ed-7f10-a7c3-b752188afb01"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "DCR-016/017 already applied and reported here; no duplicate edits or approval notice. S6 turn failed; artifact/evidence inspected, no release inferred."
+    },
+    {
+      "chat_id": "01a11052-0805-7e83-a02e-68219eeeb0b9",
+      "title": "Complete S5 implementation",
+      "updated_at": 1791277193,
+      "reviewed_turns": [
+        "01a11052-6b0d-75d0-aafb-e505007933c5"
+      ],
+      "older_history_cursor": null,
+      "older_history_remaining": false,
+      "truncated_items": [],
+      "notes": "DCR-016/017 already applied and reported here; no duplicate edits or approval notice. S6 turn failed; artifact/evidence inspected, no release inferred."
     }
   ],
   "limitations": [
@@ -390,6 +414,6 @@
     "Business Requirements canonical DOCX locked by another process; generated baseline source inspected instead. Other three canonical DOCX files inspected read-only.",
     "No live infrastructure or runtime tests performed."
   ],
-  "last_attempt_at": "2026-10-06T20:43:06+13:00",
-  "last_attempt_status": "Completed; DCR-015 discovered already applied; no repeated replacement."
+  "last_attempt_at": "2026-10-07T10:44:11+13:00",
+  "last_attempt_status": "Completed; DCR-016/017 already applied and notified; no new canonical change."
 }
