@@ -714,3 +714,11 @@ Application completed 9 October 2026: Architecture, Plan and Technology each mov
 
 The DCR-022 batch summary and separate GitHub publication approval request were delivered to Add project documents to docs on 9 October 2026 through send_message_to_thread, destination thread ID `01a0f496-cb37-7150-92bb-d0338e8fb952`. No human publication approval has been received. No DCR-022 branch, commit or push was created.
 
+### S10 project-guide reconciliation — 9 October 2026
+
+Source: this chat, human report that S10 implementation was absent from the project guide. The guide uses `project-progress.json` and authored text in `build-project-dashboard.cjs`; DCR-022 updated neither, leaving S10 falsely pending in the generated HTML despite the completed local evidence. Updated the four S10 checkpoint records to done with `test-evidence/2026-10-09/s10-local-media.md`, corrected the S9/S10 summaries and S10 closeout steps, refreshed `PROJECT-DASHBOARD.md`, and rebuilt the HTML. `releaseAccepted` remains false because real S3/IAM/CORS, Cognito browser, accessibility, staging and release operating policies remain open. This is supporting-guide status reconciliation within approved S10 scope; it changes no canonical Word content or version, business scope, architecture target, operating policy, release commitment or publication approval.
+
+
+### DCR-022 publication approval — 9 October 2026
+Human user in Add project documents to docs replied 'approve' directly to the DCR-022 publication request. Existing clean checkout commit af607fe2ff37403597fa3994f2cefc73fad0bb6e already contains the canonical v2.14 files, v2.13 archives and DCR-022 summary/evidence, alongside previously committed DCR-021 history. Preserve that existing commit; no unrelated files newly staged. Approved publication branch: docs/dcr-022-s10-media-v2-14. Publication record commit and remote push verification follow. Origin verified as https://github.com/waky-proj/connecto-docs.
+
