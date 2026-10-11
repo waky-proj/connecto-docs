@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-10-09T10:29:36+13:00",
+  "reviewed_at": "2026-10-12T10:46:18+13:00",
   "approval_checked": true,
   "explicit_document_approval_found": true,
   "chats": [
@@ -386,10 +386,11 @@
     {
       "chat_id": "01a11076-9a2f-7bf0-8b84-36189425faa0",
       "title": "Complete S6 implementation",
-      "updated_at": 1791365936,
+      "updated_at": 1791514847,
       "reviewed_turns": [
         "01a11076-d5ed-7f10-a7c3-b752188afb01",
-        "01a115aa-551b-7430-b429-d698f39fe196"
+        "01a115aa-551b-7430-b429-d698f39fe196",
+        "01a1148d-c9b5-7a01-9b90-460d0e40b1c4"
       ],
       "older_history_cursor": null,
       "older_history_remaining": false,
@@ -435,9 +436,12 @@
     {
       "chat_id": "01a11b35-0c04-7183-8083-dddd6bac89cc",
       "title": "Implement S10 quarantined uploads",
-      "updated_at": 1791495005,
+      "updated_at": 1791516063,
       "reviewed_turns": [
-        "01a11b36-9dc3-74c2-a342-96e7e263b800"
+        "01a11b36-9dc3-74c2-a342-96e7e263b800",
+        "01a11eac-188e-7910-a5d6-2c8026463b84",
+        "01a11e83-aa4e-7643-b3c1-c5b471834f7c",
+        "01a11d84-9545-7161-a76d-44e8af61a78e"
       ],
       "notes": "Reviewed 9 October daily monitor. S8/S9 already applied; S10 failed/incomplete, no completion inferred; source evidence retained.",
       "older_history_remaining": false,
@@ -492,6 +496,19 @@
       "older_history_remaining": false,
       "older_history_cursor": null,
       "truncated_items": []
+    },
+    {
+      "chat_id": "01a11eab-afa5-7ac0-b935-47e9b640ac5e",
+      "title": "Implement S11 pilot features",
+      "updated_at": 1791714509,
+      "reviewed_turns": [
+        "01a1293f-d7ae-7600-90c1-8022ef58969d",
+        "01a11fe2-2b5e-7543-9649-83104652c83b",
+        "01a11eaf-428f-7a52-80f9-c1b897fe0d6a"
+      ],
+      "older_history_remaining": false,
+      "older_history_cursor": null,
+      "notes": "Recent changed turns reviewed; applied batches already notified."
     }
   ],
   "limitations": [
@@ -503,8 +520,8 @@
   "last_attempt_at": "2026-10-07T10:44:11+13:00",
   "last_attempt_status": "Completed; DCR-016/017 already applied and notified; no new canonical change.",
   "last_attempt": {
-    "at": "2026-10-09T10:29:36+13:00",
+    "at": "2026-10-12T10:46:18+13:00",
     "status": "completed",
-    "reason": "Chat access restored; no new actionable canonical batch."
+    "reason": "S10/S11 applied updates already notified; later local rehearsals remain supporting evidence."
   }
 }

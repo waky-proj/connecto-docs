@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-09",
+  "method": "Equal weight for 48 tracked checkpoints; done requires a recorded evidence reference. Local completion does not close a release slice.",
+  "slices": [
+    {
+      "id": "S0",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S0-1",
+          "title": "Token validation and session isolation",
+          "status": "done",
+          "evidence": [
+            "docs/test-evidence/2026-10-01/s0-account-isolation.md",
+            "docs/test-evidence/2026-10-01/s0-s1-signin-profile.md"
+          ]
+        },
+        {
+          "id": "S0-2",
+          "title": "Local identity configuration and manual AI fallback",
+          "status": "done",
+          "evidence": [
+            "docs/test-evidence/2026-10-01/s0-account-isolation.md",
+            "docs/test-evidence/2026-10-01/s0-s1-signin-profile.md"
+          ]
+        },
+        {
+          "id": "S0-3",
+          "title": "Real Cognito and authenticated browser acceptance",
+          "status": "pending",
+          "evidence": []
+        },
+        {
+          "id": "S0-4",
+          "title": "Staging transport and release recovery",
+          "status": "pending",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": "S1",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S1-1",
+          "title": "Allowlisted profile API and UI",
+          "status": "done",
+          "evidence": [
+            "docs/test-evidence/2026-10-01/s0-s1-signin-profile.md"
+          ]
+        },
+        {
+          "id": "S1-2",
+          "title": "Owned paginated activity and UI",
+          "status": "done",
+          "evidence": [
+            "docs/test-evidence/2026-10-01/s0-account-isolation.md"
+          ]
+        },
+        {
+          "id": "S1-3",
+          "title": "Real SQL Server persistence and ownership",
+          "status": "done",
+          "evidence": [
+            "docs/test-evidence/2026-10-03/f3-local-sql-acceptance.md"
+          ]
+        },
+        {
+          "id": "S1-4",
+          "title": "Fresh-device/browser retrieval and retry acceptance",
+          "status": "pending",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S2-1",
+          "title": "Authenticated listing creation",
+          "status": "done",
+          "evidence": [
+            "docs/test-evidence/2026-10-01/current-state-testing.md"
+          ]
+        },
+        {
+          "id": "S2-2",
+          "title": "Approved taxonomy and currency/pricing contract",
+          "status": "done",
+          "evidence": [
+            "docs/test-evidence/2026-10-04/s2-listing-terms.md"
+          ]
+        },
+        {
+          "id": "S2-3",
+          "title": "Owner edit/pause/close with revisions",
+          "status": "done",
+          "evidence": [
+            "docs/test-evidence/2026-10-04/s2-listing-terms.md"
+          ]
+        },
+        {
+          "id": "S2-4",
+          "title": "Real database validation and lifecycle acceptance",
+          "status": "done",
+          "evidence": [
+            "docs/test-evidence/2026-10-04/s2-listing-terms.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S3-1",
+          "title": "Owner-authorised deterministic matches",
+          "status": "done",
+          "evidence": [
+            "docs/test-evidence/2026-10-01/current-state-testing.md"
+          ]
+        },
+        {
+          "id": "S3-2",
+          "title": "Persisted discovery and public details",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-05/s3-local-discovery.md"]
+        },
+        {
+          "id": "S3-3",
+          "title": "Configured/versioned weights and explanations",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-05/s3-local-discovery.md"]
+        },
+        {
+          "id": "S3-4",
+          "title": "Owner-reviewed semantic and exclusion acceptance",
+          "status": "pending",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S4-1",
+          "title": "Blocks and reports",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-05/s4-local-safety.md"]
+        },
+        {
+          "id": "S4-2",
+          "title": "Authorised operator cases",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-05/s4-local-safety.md"]
+        },
+        {
+          "id": "S4-3",
+          "title": "Transactional outbox and receipts",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-05/s4-local-safety.md"]
+        },
+        {
+          "id": "S4-4",
+          "title": "Crash/replay acceptance",
+          "status": "pending",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S5-1",
+          "title": "Participant requests and terms",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-06/s5-local-connections.md"]
+        },
+        {
+          "id": "S5-2",
+          "title": "Inbox and reload persistence",
+          "status": "in-progress",
+          "evidence": ["docs/test-evidence/2026-10-06/s5-local-connections.md"]
+        },
+        {
+          "id": "S5-3",
+          "title": "Decline and withdraw",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-06/s5-local-connections.md"]
+        },
+        {
+          "id": "S5-4",
+          "title": "Permission and duplicate acceptance",
+          "status": "in-progress",
+          "evidence": ["docs/test-evidence/2026-10-06/s5-local-connections.md"]
+        }
+      ]
+    },
+    {
+      "id": "S6",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S6-1",
+          "title": "Atomic acceptance and capacity",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-06/s6-local-acceptance.md", "docs/test-evidence/2026-10-07/s6-sql-acceptance.md"]
+        },
+        {
+          "id": "S6-2",
+          "title": "Immutable agreement view",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-06/s6-local-acceptance.md"]
+        },
+        {
+          "id": "S6-3",
+          "title": "Idempotency and revisions",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-06/s6-local-acceptance.md", "docs/test-evidence/2026-10-07/s6-sql-acceptance.md"]
+        },
+        {
+          "id": "S6-4",
+          "title": "Real SQL concurrent acceptance",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-07/s6-sql-acceptance.md"]
+        }
+      ]
+    },
+    {
+      "id": "S7",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S7-1",
+          "title": "Persistent participant messages",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-07/s7-local-conversations.md"]
+        },
+        {
+          "id": "S7-2",
+          "title": "Cursor history and retry keys",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-07/s7-local-conversations.md"]
+        },
+        {
+          "id": "S7-3",
+          "title": "Delivery/read semantics",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-07/s7-local-conversations.md"]
+        },
+        {
+          "id": "S7-4",
+          "title": "Multi-device and forbidden-access acceptance",
+          "status": "in-progress",
+          "evidence": ["docs/test-evidence/2026-10-07/s7-local-conversations.md"]
+        }
+      ]
+    },
+    {
+      "id": "S8",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S8-1",
+          "title": "Independent completion reports",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-08/s8-local-outcomes.md"]
+        },
+        {
+          "id": "S8-2",
+          "title": "Confirmation state and history",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-08/s8-local-outcomes.md"]
+        },
+        {
+          "id": "S8-3",
+          "title": "Cancellation and dispute workflow",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-08/s8-local-outcomes.md"]
+        },
+        {
+          "id": "S8-4",
+          "title": "Concurrency and permission acceptance",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-08/s8-local-outcomes.md"]
+        }
+      ]
+    },
+    {
+      "id": "S9",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S9-1",
+          "title": "Eligible role-specific reviews",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-08/s9-local-feedback.md"]
+        },
+        {
+          "id": "S9-2",
+          "title": "Hidden reciprocal publication",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-08/s9-local-feedback.md"]
+        },
+        {
+          "id": "S9-3",
+          "title": "Reputation recomputation",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-08/s9-local-feedback.md"]
+        },
+        {
+          "id": "S9-4",
+          "title": "Privacy/window/withdrawal acceptance",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-08/s9-local-feedback.md"]
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S10-1",
+          "title": "Private quarantined upload",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-09/s10-local-media.md"]
+        },
+        {
+          "id": "S10-2",
+          "title": "Format validation and metadata removal",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-09/s10-local-media.md"]
+        },
+        {
+          "id": "S10-3",
+          "title": "Parent-authorised serving",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-09/s10-local-media.md"]
+        },
+        {
+          "id": "S10-4",
+          "title": "Withdrawal and failure acceptance",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-09/s10-local-media.md"]
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "releaseAccepted": false,
+      "releaseEvidence": [],
+      "checkpoints": [
+        {
+          "id": "S11-1",
+          "title": "Defined cohort metrics",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-09/s11-local-pilot.md", "docs/test-evidence/2026-10-11/s11-local-measurement.md"]
+        },
+        {
+          "id": "S11-2",
+          "title": "Operator and pilot views",
+          "status": "done",
+          "evidence": ["docs/test-evidence/2026-10-09/s11-local-pilot.md", "docs/test-evidence/2026-10-11/s11-local-measurement.md"]
+        },
+        {
+          "id": "S11-3",
+          "title": "Restore and rotation drills",
+          "status": "in-progress",
+          "evidence": ["docs/test-evidence/2026-10-11/s11-local-measurement.md"]
+        },
+        {
+          "id": "S11-4",
+          "title": "Full journey and owner release review",
+          "status": "in-progress",
+          "evidence": ["docs/test-evidence/2026-10-11/s11-local-measurement.md", "docs/test-evidence/2026-10-11/s11-owner-release-review.md"]
+        }
+      ]
+    }
+  ]
+}
