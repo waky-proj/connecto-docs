@@ -1,9 +1,9 @@
 # Repeatable project workflows
 
-Use the live [Connecto project guide](../connecto-project-guide.html) from the workspace root:
+Use the live [Connecto project guide](project-tracker/connecto-project-guide.html) from the workspace root:
 
 ```powershell
-node serve-project-dashboard.cjs
+node docs/project-tracker/serve-project-dashboard.cjs
 ```
 
 Open <http://127.0.0.1:5188/> and choose **Workflows**. The buttons run fixed local commands without using a Codex session or model tokens. They use the installed Node, npm, .NET and Terraform tools and the current checkout. The browser-only HTML snapshot cannot execute them. Results are shown in the guide and logged under `.workflow-runs/` in the workspace. Review the full log, including skips; a green command result is not release acceptance.
